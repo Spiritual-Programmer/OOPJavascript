@@ -1,0 +1,23 @@
+{
+  "name": "oopjavascript",
+  "version": "1.0.0",
+  "description": "Javascript OOP application that takes multiple books as input and outputs the oldest book from the author with the most books.",
+  "main": "script.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Spiritual-Programmer/OOPJavascript.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Spiritual-Programmer/OOPJavascript/issues"
+  },
+  "homepage": "https://github.com/Spiritual-Programmer/OOPJavascript#readme",
+  "devDependencies": {
+    "jest": "^27.3.1"
+  }
+}
