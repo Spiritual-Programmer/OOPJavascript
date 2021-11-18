@@ -1,5 +1,7 @@
 "use strict";
 
+const { find } = require("lodash");
+
 const authors = [
   {
     "name": "steven king",
@@ -46,17 +48,21 @@ const getAuthorOfMostBooks = ((author, number) => Object.keys(author).find(key =
 const mostBooksAuthor = getAuthorOfMostBooks(dict,maxNumberOfBooks);
 
 //Find oldest book
-let neededBook = {};
-let oldestBook = new Date("12/31/2500");
-books.forEach(book => {
-  if (book.author == mostBooksAuthor) {
-    let currentDate = new Date(book.dateOfPublication);
-    if (currentDate < oldestBook) {
-    oldestBook = currentDate;
-    neededBook = book;
+const findOldestBook = (books => {
+  let neededBook = {};
+  let oldestBook = new Date("12/31/2500");
+  books.forEach(book => {
+    if (book.author == mostBooksAuthor) {
+      let currentDate = new Date(book.dateOfPublication);
+      if (currentDate < oldestBook) {
+      oldestBook = currentDate;
+      neededBook = book;
+      }
     }
-  }
-});
+  })
+  return neededBook
+})
+const neededBook = findOldestBook(books);
 
 //Find genre of author
 const genre = authors.filter(author => author.name.toLowerCase() === neededBook.author.toLowerCase())[0].genre;
@@ -65,4 +71,4 @@ const genre = authors.filter(author => author.name.toLowerCase() === neededBook.
 console.log(`${neededBook.title}, written by ${genre} writer ${neededBook.author} on ${neededBook.dateOfPublication} is ${neededBook.numberOfPages} pages long`);
 
 
-module.exports = splitInputByBook
+module.exports = splitInputByBook, booksArrayByDetails, findOldestBook
