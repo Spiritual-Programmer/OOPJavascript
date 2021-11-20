@@ -48,13 +48,10 @@ The Jungle Book, written by Adventure writer Rudyard Kipling on 09/17/1900 is 48
 
 ## Getting Started
 
-### Installation
-
-1. Clone the repo into your desired location using `git clone https://github.com/Spiritual-Programmer/OOPJavascript.git`
-
 ### How to run the project
 
-1. Run `node script.js` command to run the project
+1. Have node installed
+2. Run `node script.js` command to run the project
 
 ### How to test the project
 

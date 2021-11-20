@@ -49,6 +49,7 @@ while (true) {
 function parseInput(input) {
   if (input == null || input.length === 0) throw "Invalid Input"
   else {
+//     Comments reserved for testing
 //     const splitInputByBook = input => input.split(/\n/);
 //     const booksArray = splitInputByBook(input).filter(book => book.split(/,/).length === 4)
     const booksArray = splitInputByBook.filter(book => book.split(/,/).length === 4)
