@@ -4,7 +4,8 @@
   "description": "Javascript OOP application that takes multiple books as input and outputs the oldest book from the author with the most books.",
   "main": "script.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --coverage",
+    "testwatch":"jest --watchAll"
   },
   "repository": {
     "type": "git",

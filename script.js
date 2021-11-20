@@ -30,7 +30,6 @@ class Book {
 
 const input = "Carrie,06/13/1982,Steven King,762\nThe Stand,01/01/1984,Steven King,1200\nThe Hunger Games,11/12/2013,Suzanne Collins,600\nThe Jungle Book,03/21/1898,Rudyard Kipling,483\nKim,02/03/1910,Rudyard Kipling,526\nI Robot,08/11/1945,Isaac Asimov,474\nFirestarter,04/01/1982,Steven King,597";
 
-
 function parseInput(input) {
   if (input == null || input.length === 0) throw "Invalid Input"
   else {
@@ -74,9 +73,13 @@ const neededBook = findOldestBook(books);
 //Find genre of author
 const genre = authors.filter(author => author.name.toLowerCase() === neededBook.author.toLowerCase())[0].genre;
 
-  //Output Result
-  console.log(`${neededBook.title}, written by ${genre} writer ${neededBook.author} on ${neededBook.dateOfPublication} is ${neededBook.numberOfPages} pages long`);
+//Output Result
+console.log(`${neededBook.title}, written by ${genre} writer ${neededBook.author} on ${neededBook.dateOfPublication} is ${neededBook.numberOfPages} pages long`);
 
+//Export functions for unit testing
+module.exports = {
+  parseInput,
+  findAuthorWithMostBooks, 
+  findOldestBook 
+}
 
-
-module.exports = parseInput, findOldestBook

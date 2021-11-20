@@ -1,7 +1,7 @@
-const findOldestBook = require('./script')
+const functionsLibrary = require('./script')
 
 test('finds the oldest book from the date published', () => {
-  input = [
+  const inputTest = [
     {title: 'Carrie',
     dateOfPublication: '06/13/1982', 
     numberOfPages: '762', 
@@ -14,12 +14,12 @@ test('finds the oldest book from the date published', () => {
     author: 'Steven King'
     }
   ]
-  neededBook = {
+  result = {
     title: 'Carrie',
     dateOfPublication: '06/13/1982', 
     numberOfPages: '762', 
     author: 'Steven King'
   }
 
-  expect(findOldestBook(input)).toEqual(neededBook)
+  expect(functionsLibrary.findOldestBook(inputTest)).toEqual(result)
 })
