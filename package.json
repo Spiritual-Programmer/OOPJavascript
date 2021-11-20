@@ -5,7 +5,7 @@
   "main": "script.js",
   "scripts": {
     "test": "jest --coverage",
-    "testwatch":"jest --watchAll"
+    "testwatch": "jest --watchAll"
   },
   "repository": {
     "type": "git",
@@ -20,5 +20,8 @@
   "homepage": "https://github.com/Spiritual-Programmer/OOPJavascript#readme",
   "devDependencies": {
     "jest": "^27.3.1"
+  },
+  "dependencies": {
+    "prompt-sync": "^4.1.6"
   }
 }
